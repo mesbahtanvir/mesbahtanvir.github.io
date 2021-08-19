@@ -25,4 +25,3 @@ In my current role, I mostly built backend services for Data Platform team. Most
 
 ### Previous Work
 
-
