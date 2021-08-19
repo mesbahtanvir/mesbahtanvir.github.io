@@ -2,7 +2,7 @@ baseurl: www.mesbahtanvir.com
 languageCode: en-us
 theme: stack
 paginate: 5
-title: Example Site
+title: Mesbah Tanvir
 
 # Change it to your Disqus shortname before using
 disqusShortname: mesbahtanvir
@@ -15,8 +15,8 @@ googleAnalytics:
 DefaultContentLanguage: en
 
 permalinks:
-    post: /p/:slug/
-    page: /:slug/
+    post: /:section/:slug/
+    page: /:section/:slug/
 
 params:
     mainSections:
