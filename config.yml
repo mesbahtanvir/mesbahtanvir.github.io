@@ -7,7 +7,7 @@ title: Mesbah Tanvir
 disqusShortname: mesbahtanvir
 
 # GA Tracking ID
-googleAnalytics:
+googleAnalytics: G-0E6F05TD4E
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl, it
@@ -34,7 +34,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: Mesbah Tanvir
         avatar:
             enabled: true
             local: true
