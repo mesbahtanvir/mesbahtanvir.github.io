@@ -35,22 +35,23 @@ params:
   profession: "Software Engineer"
   github: "https://github.com/mesbahtanvir"
   linkedin: "https://www.linkedin.com/in/mesbahtanvir/"
-  twitter: "https://twitter.com/"
+# twitter: "https://twitter.com/"
   instagram: "https://www.instagram.com/mesbahtanvir/"
   facebook: "https://www.facebook.com/mesbahtanvir.cs/"
 
   # About
   disable_about: false
-  descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
-  descripe_l2_person: "This is a example template for about section. You can find my works [here](#projects)"
+  descripe_l1_person: "Hi, I'm Mesbah Tanvir, passionate at building software. I usually build backend services with cutting edge modern tools."
   skills:
+    - name: Algo & DS
+      percentage: 80
     - name: C++
       percentage: 80
     - name: Golang
       percentage: 70
-    - name: Kubernetes
-      percentage: 50
     - name: MySQL
+      percentage: 60
+    - name: Kubernetes
       percentage: 50
     - name: Redis
       percentage: 50
@@ -64,24 +65,24 @@ params:
       startdate: May 2020
       enddate: present
       featuredpoints:
-        - point: Lead backend developer for a product.
-        - point: Created a frontend design for a product.
+        - point: Building blinking fast cloud-native online analytics processing (OLAP) database system.
+        - point: Owner of highly available, fault-tolerant service for managing metadata.
     - company: "Grab"
       id: "grab-swe" # use this, when you want to change the id(used for navigation)
       role: "Software Engineer"
       startdate: Mar 2020
       enddate: Dec 2020
       featuredpoints:
-        - point: Lead backend developer for a product.
-        - point: Created a frontend design for a product.
+        - point: Created a dedicated portal for merchants to view consolidated transactions and balances.
+        - point: Extended campaign projects to add support for merchants to join running campaigns.
     - company: "TigerIT"
       id: "TigerIT-swe" # use this, when you want to change the id(used for navigation)
       role: "Software Engineer"
       startdate: Feb 2019
       enddate: Jan 2020
       featuredpoints:
-        - point: Lead backend developer for a product.
-        - point: Created a frontend design for a product.
+        - point: Built a module to detect car numbers from car number plates (Bangla fonts both print and handwritten).
+        - point: Built a module to detect if an object crossed zebra crossing on road breaking traffic from video.
 
   # Education
   disable_education: false
@@ -95,27 +96,22 @@ params:
   # Projects
   disable_projects: false
   projects:
-    - name: "Example project without details"
-      img: /images/project.jpg
-      githublink: "https://github.com/"
-      featuredlink: "/"
-      description: "Description of project"
+    - name: "Eschool"
+#     img: /images/project.jpg
+      githublink: "https://github.com/mesbahtanvir/eschool-webProject"
+#     featuredlink: "/"
+      description: "It helps competitive examinees (written exam for job/university admission test) to achieve their goal by
+providing reading/practice materials according to their weaknesses and strength."
 
   # Achievements
   disable_achievements: false
   achievements:
-    - title: Competition winner
-      description: We are developed a product which can help others.
-      img: /images/achiv.jpg
-    - title: Competition winner
-      description: We are developed a product which can help others.
-      img: /images/achiv.jpg
-    - title: Competition winner
-      description: We are developed a product which can help others.
-      img: /images/achiv.jpg
-    - title: Competition winner
-      description: We are developed a product which can help others.
-      img: /images/achiv.jpg
+    - title: 1st Runner Up
+      description: "1st Runner Up (130+ teams) as DU_MachineMen at National Programming Contest at NSU, 2018"
+#      img: /images/achiv.jpg
+    - title: Ranked 5th
+      description: "Ranked 5th (150+ teams) as DU_Inception at ACM ICPC Dhaka Regional, 2017"
+#      img: /images/achiv.jpg
 
   # Contact
   disable_contact: false
