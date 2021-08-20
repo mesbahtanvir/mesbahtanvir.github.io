@@ -114,9 +114,9 @@ providing reading/practice materials according to their weaknesses and strength.
 #      img: /images/achiv.jpg
 
   # Contact
-  disable_contact: false
-  contact_content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-  email: "mesbah.tanvir.cs@gmail.com"
+  disable_contact: true
+  #contact_content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+  #email: "mesbah.tanvir.cs@gmail.com"
 
   # Footer
   socialiconfooter: true
