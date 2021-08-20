@@ -1,0 +1,131 @@
+baseURL: "https://www.mesbahtanvir.com"
+languageCode: "en-us"
+title: "Mesbah Tanvir"
+theme: "hugo-profile"
+relativeURLs: true
+
+googleanalytics: G-0E6F05TD4E
+disqusShortname:
+Paginate: 3
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+enableEmoji: true
+params:
+  version: 3
+
+  favicon: "/images/fav.png"
+  description: "A high performance hugo theme for personal portfolio and blog."
+
+  # Navbar Menus
+  customMenus:
+    - name: "Blog"
+      Url: "/blog"
+
+  # home
+  disable_home: false
+  profile_image: "/images/profile.png"
+  name: "Mesbah Tanvir"
+  profession: "Software Engineer"
+  github: "https://github.com/mesbahtanvir"
+  linkedin: "https://www.linkedin.com/in/mesbahtanvir/"
+  twitter: "https://twitter.com/"
+  instagram: "https://www.instagram.com/mesbahtanvir/"
+  facebook: "https://www.facebook.com/mesbahtanvir.cs/"
+
+  # About
+  disable_about: false
+  descripe_l1_person: "Hi, I'm Profile, a passionate web developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+  descripe_l2_person: "This is a example template for about section. You can find my works [here](#projects)"
+  skills:
+    - name: C++
+      percentage: 80
+    - name: Golang
+      percentage: 70
+    - name: Kubernetes
+      percentage: 50
+    - name: MySQL
+      percentage: 50
+    - name: Redis
+      percentage: 50
+
+  # Experience
+  disable_experience: false
+  experience:
+    - company: "Bytedance"
+      id: "bytedance-swe"   # use this, when you want to change the id(used for navigation)
+      role: "Software Engineer"
+      startdate: May 2020
+      enddate: present
+      featuredpoints:
+        - point: Lead backend developer for a product.
+        - point: Created a frontend design for a product.
+    - company: "Grab"
+      id: "grab-swe" # use this, when you want to change the id(used for navigation)
+      role: "Software Engineer"
+      startdate: Mar 2020
+      enddate: Dec 2020
+      featuredpoints:
+        - point: Lead backend developer for a product.
+        - point: Created a frontend design for a product.
+    - company: "TigerIT"
+      id: "TigerIT-swe" # use this, when you want to change the id(used for navigation)
+      role: "Software Engineer"
+      startdate: Feb 2019
+      enddate: Jan 2020
+      featuredpoints:
+        - point: Lead backend developer for a product.
+        - point: Created a frontend design for a product.
+
+  # Education
+  disable_education: false
+  education:
+    - degree: "Bachelor's"
+      branch: "Compter Science & Engineering"
+      university: "University of Dhaka"
+      startedyear: "2015"
+      graduation: "2019"
+
+  # Projects
+  disable_projects: false
+  projects:
+    - name: "Example project without details"
+      img: /images/project.jpg
+      githublink: "https://github.com/"
+      featuredlink: "/"
+      description: "Description of project"
+
+  # Achievements
+  disable_achievements: false
+  achievements:
+    - title: Competition winner
+      description: We are developed a product which can help others.
+      img: /images/achiv.jpg
+    - title: Competition winner
+      description: We are developed a product which can help others.
+      img: /images/achiv.jpg
+    - title: Competition winner
+      description: We are developed a product which can help others.
+      img: /images/achiv.jpg
+    - title: Competition winner
+      description: We are developed a product which can help others.
+      img: /images/achiv.jpg
+
+  # Contact
+  disable_contact: false
+  contact_content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+  email: "mesbah.tanvir.cs@gmail.com"
+
+  # Footer
+  socialiconfooter: true
+  recentposts: true
+
+  # Blog
+  showdescription: false
+  tweet: true
