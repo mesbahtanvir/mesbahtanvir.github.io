@@ -35,9 +35,9 @@ params:
   profession: "Software Engineer"
   github: "https://github.com/mesbahtanvir"
   linkedin: "https://www.linkedin.com/in/mesbahtanvir/"
-# twitter: "https://twitter.com/"
-  instagram: "https://www.instagram.com/mesbahtanvir/"
-  facebook: "https://www.facebook.com/mesbahtanvir.cs/"
+  stackoverflow: "https://stackoverflow.com/users/12688544/mesbahtanvir"
+  medium: "https://medium.com/@mesbah.tanvir.cs"
+  goodreads: "https://www.goodreads.com/mesbahtanvir"
 
   # About
   disable_about: false
