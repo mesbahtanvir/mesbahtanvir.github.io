@@ -1,7 +1,7 @@
 baseUrl: https://www.mesbahtanvir.com/
 relativeurls: true
 languageCode: en-us
-theme: stack
+theme: ananke
 paginate: 5
 title: Mesbah Tanvir
 
