@@ -97,7 +97,7 @@ params:
   disable_projects: false
   projects:
     - name: "Eschool"
-#     img: /images/project.jpg
+      img: /images/project.jpg
       githublink: "https://github.com/mesbahtanvir/eschool-webProject"
 #     featuredlink: "/"
       description: "It helps competitive examinees (written exam for job/university admission test) to achieve their goal by
