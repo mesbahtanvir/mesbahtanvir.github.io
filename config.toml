@@ -1,7 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "https://www.mesbahtanvir.com/"
 languageCode = "en-us"
-title = "slate theme demo"
-theme = "slate"
+title = "Mesbah Tanvir"
+theme = "personal-web"
 
 publishDir = "docs"
 
