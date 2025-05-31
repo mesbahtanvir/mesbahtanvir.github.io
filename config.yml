@@ -1,0 +1,127 @@
+baseURL: "https://www.mesbahtanvir.com"
+languageCode: "en-us"
+title: "Mesbah Tanvir"
+theme: "hugo-profile"
+relativeURLs: true
+
+googleanalytics: G-0E6F05TD4E
+disqusShortname:
+Paginate: 3
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+enableEmoji: true
+params:
+  version: 3
+
+  favicon: "/images/fav.png"
+  description: "A high performance hugo theme for personal portfolio and blog."
+
+  # Navbar Menus
+  customMenus:
+    - name: "Blog"
+      Url: "/blog"
+
+  # home
+  disable_home: false
+  profile_image: "/images/profile.png"
+  name: "Mesbah Tanvir"
+  profession: "Software Engineer"
+  github: "https://github.com/mesbahtanvir"
+  linkedin: "https://www.linkedin.com/in/mesbahtanvir/"
+  stackoverflow: "https://stackoverflow.com/users/12688544/mesbahtanvir"
+  medium: "https://medium.com/@mesbah.tanvir.cs"
+  goodreads: "https://www.goodreads.com/mesbahtanvir"
+
+  # About
+  disable_about: false
+  descripe_l1_person: "Hi, I'm Mesbah Tanvir, passionate at building software. I usually build backend services with cutting edge modern tools."
+  skills:
+    - name: Algo & DS
+      percentage: 80
+    - name: C++
+      percentage: 80
+    - name: Golang
+      percentage: 70
+    - name: MySQL
+      percentage: 60
+    - name: Kubernetes
+      percentage: 50
+    - name: Redis
+      percentage: 50
+
+  # Experience
+  disable_experience: false
+  experience:
+    - company: "Bytedance"
+      id: "bytedance-swe"   # use this, when you want to change the id(used for navigation)
+      role: "Software Engineer"
+      startdate: May 2020
+      enddate: present
+      featuredpoints:
+        - point: Building blinking fast cloud-native online analytics processing (OLAP) database system.
+        - point: Owner of highly available, fault-tolerant service for managing metadata.
+    - company: "Grab"
+      id: "grab-swe" # use this, when you want to change the id(used for navigation)
+      role: "Software Engineer"
+      startdate: Mar 2020
+      enddate: Dec 2020
+      featuredpoints:
+        - point: Created a dedicated portal for merchants to view consolidated transactions and balances.
+        - point: Extended campaign projects to add support for merchants to join running campaigns.
+    - company: "TigerIT"
+      id: "TigerIT-swe" # use this, when you want to change the id(used for navigation)
+      role: "Software Engineer"
+      startdate: Feb 2019
+      enddate: Jan 2020
+      featuredpoints:
+        - point: Built a module to detect car numbers from car number plates (Bangla fonts both print and handwritten).
+        - point: Built a module to detect if an object crossed zebra crossing on road breaking traffic from video.
+
+  # Education
+  disable_education: false
+  education:
+    - degree: "Bachelor's"
+      branch: "Compter Science & Engineering"
+      university: "University of Dhaka"
+      startedyear: "2015"
+      graduation: "2019"
+
+  # Projects
+  disable_projects: false
+  projects:
+    - name: "Eschool"
+      img: /images/project.jpg
+      githublink: "https://github.com/mesbahtanvir/eschool-webProject"
+#     featuredlink: "/"
+      description: "It helps competitive examinees (written exam for job/university admission test) to achieve their goal by
+providing reading/practice materials according to their weaknesses and strength."
+
+  # Achievements
+  disable_achievements: false
+  achievements:
+    - title: 1st Runner Up
+      description: "1st Runner Up (130+ teams) as DU_MachineMen at National Programming Contest at NSU, 2018"
+#      img: /images/achiv.jpg
+    - title: Ranked 5th
+      description: "Ranked 5th (150+ teams) as DU_Inception at ACM ICPC Dhaka Regional, 2017"
+#      img: /images/achiv.jpg
+
+  # Contact
+  disable_contact: true
+  #contact_content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+  #email: "mesbah.tanvir.cs@gmail.com"
+
+  # Footer
+  socialiconfooter: true
+  recentposts: true
+
+  # Blog
+  showdescription: false
+  tweet: true
