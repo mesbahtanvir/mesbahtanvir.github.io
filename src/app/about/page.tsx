@@ -44,22 +44,24 @@ export default function AboutPage() {
               <h2 className="text-2xl font-semibold mb-4">Professional Bio</h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  I&apos;m a passionate full-stack developer with a love for creating beautiful,
-                  functional, and user-friendly applications. With a background in computer
-                  science and several years of professional experience, I&apos;ve had the
-                  opportunity to work on a variety of projects, from small business
-                  websites to large-scale enterprise applications.
+                  I&apos;m a passionate technologist with a strong foundation in problem-solving and system design. 
+                  My journey in technology began with competitive programming, where I ranked <span className="font-semibold text-blue-600">2nd nationally</span>, 
+                  a testament to my analytical abilities and dedication to solving complex computational challenges.
                 </p>
                 <p>
-                  My approach to development is centered around solving real problems and creating 
-                  intuitive experiences. I believe in writing clean, maintainable code and staying 
-                  up-to-date with the latest industry trends and best practices.
+                  For the past <span className="font-semibold">6 years</span>, I&apos;ve been working in <span className="font-semibold">Big Tech</span>, where I&apos;ve had the privilege 
+                  to design and implement large-scale systems that serve millions of users. My experience spans across 
+                  building robust backend infrastructure and optimizing database performance at scale.
                 </p>
                 <p>
-                 When I&apos;m not coding, you can find me hiking in the mountains, reading
-                  science fiction, or experimenting with new recipes in the kitchen. I&apos;m
-                  always eager to learn new technologies and techniques to improve my
-                  craft.
+                  My approach to technology is rooted in <span className="font-semibold">elegant problem-solving</span> and 
+                  <span className="font-semibold"> engineering excellence</span>. I thrive in environments that challenge me to push boundaries 
+                  and deliver solutions that are not just functional, but also efficient and maintainable.
+                </p>
+                <p>
+                  When I&apos;m not architecting systems, I enjoy mentoring aspiring engineers and contributing to 
+                  open-source projects. I believe in continuous learning and staying at the forefront of technological 
+                  advancements to drive meaningful impact.
                 </p>
               </div>
             </motion.div>

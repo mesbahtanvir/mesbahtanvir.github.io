@@ -65,7 +65,7 @@ export default function Home() {
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-600">
             {/* Replace with your own image */}
             <Image
-              src="/profile-placeholder.jpg"
+              src="/images/profile.png"
               alt="Mesbah Tanvir"
               fill
               style={{ objectFit: 'cover' }}
@@ -83,23 +83,17 @@ export default function Home() {
       >
         <h2 className="text-2xl md:text-3xl font-semibold mb-8">What I Do</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <div className="text-blue-600 text-4xl mb-4">💻</div>
-            <h3 className="text-xl font-semibold mb-2">Web Development</h3>
-            <p className="text-gray-600">Creating responsive and performant web applications using modern technologies.</p>
+            <div className="text-blue-600 text-4xl mb-4">🖥️</div>
+            <h3 className="text-xl font-semibold mb-2">Backend Infrastructure</h3>
+            <p className="text-gray-600">Designing and implementing scalable, reliable backend systems and microservices architecture.</p>
           </div>
           
           <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <div className="text-blue-600 text-4xl mb-4">🎨</div>
-            <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
-            <p className="text-gray-600">Designing intuitive and beautiful user interfaces that enhance user experience.</p>
-          </div>
-          
-          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <div className="text-blue-600 text-4xl mb-4">📱</div>
-            <h3 className="text-xl font-semibold mb-2">Mobile Development</h3>
-            <p className="text-gray-600">Building cross-platform mobile applications that work seamlessly on all devices.</p>
+            <div className="text-blue-600 text-4xl mb-4">🗄️</div>
+            <h3 className="text-xl font-semibold mb-2">Database Technology</h3>
+            <p className="text-gray-600">Expertise in database design, optimization, and management across various database systems.</p>
           </div>
         </div>
       </motion.div>
