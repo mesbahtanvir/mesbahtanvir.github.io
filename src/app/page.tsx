@@ -20,7 +20,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Mesbah Tanvir</span>
+            Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Mesbah Tanvir</span>
           </motion.h1>
           
           <motion.p 
@@ -29,7 +29,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            I'm a passionate developer who loves to create beautiful and functional
+            I&apos;m a passionate developer who loves to create beautiful and functional
             web applications. With expertise in modern JavaScript frameworks and a
             keen eye for design, I bring ideas to life through clean, efficient
             code.

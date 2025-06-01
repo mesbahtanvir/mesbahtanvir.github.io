@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
