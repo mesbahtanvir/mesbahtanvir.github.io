@@ -13,7 +13,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 order-2 md:order-1">
           <motion.h1 
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 dark:text-white"
             initial={{ opacity: 0 }}

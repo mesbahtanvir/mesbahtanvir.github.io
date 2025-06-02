@@ -10,29 +10,24 @@ import BioSection, { BioParagraph, BioHighlight, BioText } from '@/components/ab
 export default function AboutPage() {
   const interests = [
     {
+      emoji: '✈️',
+      title: 'Traveling',
+      description: 'Exploring new destinations and experiencing different cultures'
+    },
+    {
+      emoji: '💪',
+      title: 'Fitness',
+      description: 'Balancing cardio (running & hiking) with strength training (weight lifting) for overall health and endurance'
+    },
+    {
+      emoji: '🎥',
+      title: 'Videography',
+      description: 'Creating immersive walking & biking tour videos, and capturing stunning aerial footage with drone videography'
+    },
+    {
       emoji: '📚',
       title: 'Continuous Learning',
       description: 'Always exploring new technologies and approaches'
-    },
-    {
-      emoji: '🏃‍♂️',
-      title: 'Fitness',
-      description: 'Regular exercise to stay healthy and focused'
-    },
-    {
-      emoji: '🎮',
-      title: 'Gaming',
-      description: 'Enjoying strategic games in my downtime'
-    },
-    {
-      emoji: '✈️',
-      title: 'Travel',
-      description: 'Exploring new places and cultures'
-    },
-    {
-      emoji: '🎵',
-      title: 'Music',
-      description: 'Listening to and occasionally creating music'
     },
     {
       emoji: '🍳',
@@ -42,18 +37,34 @@ export default function AboutPage() {
   ];
 
   const remoteWorkPreferences = [
-    'Fully remote position',
-    'Flexible working hours',
-    'Collaborative team environment',
-    'Regular video meetings',
-    'Async communication when possible'
+    'Fully remote opportunities',
+    'Projects that push the boundaries of software engineering',
+    'Solving fundamental human problems through technology',
+    'Collaborative, mission-driven teams',
+    'Flexible, asynchronous work environment'
   ];
 
   const skills = [
-    { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML/CSS'] },
-    { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'Django', 'RESTful APIs'] },
-    { category: 'Database', items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase'] },
-    { category: 'DevOps', items: ['Git', 'Docker', 'CI/CD', 'AWS', 'Vercel'] },
+    { 
+      category: 'Distributed Systems', 
+      items: ['System Design', 'Microservices', 'Concurrent Programming', 'Scalable Architectures'] 
+    },
+    { 
+      category: 'Backend', 
+      items: ['Go (Golang)', 'C++', 'Python', 'Node.js', 'RESTful/gRPC APIs'] 
+    },
+    { 
+      category: 'Frontend', 
+      items: ['React', 'TypeScript'] 
+    },
+    { 
+      category: 'Cloud & DevOps', 
+      items: ['AWS', 'Docker', 'Terraform', 'Kubernetes'] 
+    },
+    { 
+      category: 'Databases', 
+      items: ['PostgreSQL', 'MongoDB', 'Redis', 'DynamoDB'] 
+    },
   ];
 
 
