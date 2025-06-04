@@ -19,14 +19,14 @@ export default function ProjectsPage() {
   const projects: Project[] = [
     {
       id: 'project-1',
-      title: 'MindTrack - CBT Mental Health Tracker',
-      description: 'A comprehensive Cognitive Behavioral Therapy (CBT) application designed to help users track their mood, thoughts, and behaviors. Features include mood tracking, thought journaling, and progress visualization to support mental health management.',
-      image: '/projects/mindtrack-placeholder.jpg',
-      tags: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT Auth'],
-      github: 'https://github.com/mesbahtanvir/mindtrack',
-      featured: false,
+      title: 'YourThoughts - CBT Depression Helper',
+      description: 'A Cognitive Behavioral Therapy (CBT) tool designed to help individuals manage and overcome depression. Features include thought journaling, cognitive distortion identification, mood tracking, and personalized CBT exercises to reframe negative thinking patterns.',
+      image: '/projects/yourthoughts-placeholder.jpg',
+      tags: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'MongoDB'],
+      github: 'https://github.com/mesbahtanvir/yourthoughts',
+      featured: true,
       type: 'personal',
-      link: 'https://mindtrack-demo.com'
+      link: 'https://thoughts-sigma-self.vercel.app/'
     },
   ];
 
