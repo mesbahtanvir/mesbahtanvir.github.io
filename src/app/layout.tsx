@@ -36,16 +36,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased bg-[#0a0e1a] text-gray-100 min-h-screen flex flex-col relative overflow-x-hidden">
-        {/* Grid background effect */}
-        <div className="fixed inset-0 grid-bg opacity-40 pointer-events-none"></div>
-        <div className="relative z-10 flex flex-col min-h-screen">
-          <Navigation />
-          <main className="flex-grow pt-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <body className="antialiased bg-white text-gray-900 min-h-screen flex flex-col">
+        <Navigation />
+        <main className="flex-grow pt-16">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

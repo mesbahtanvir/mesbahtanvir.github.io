@@ -1,16 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0e1a;
-  --foreground: #e4e4e7;
-  --terminal-green: #00ff41;
-  --terminal-cyan: #00d9ff;
-  --terminal-amber: #ffb86c;
-  --terminal-purple: #bd93f9;
-  --card-bg: #0f172a;
-  --border-color: #1e293b;
-  --accent: #3b82f6;
-  --code-bg: #1e1e2e;
+  --background: #fefefe;
+  --foreground: #1a1a1a;
+  --paper-bg: #f9f9f9;
+  --border-color: #d1d5db;
+  --accent: #2563eb;
+  --accent-secondary: #7c3aed;
+  --muted: #6b7280;
+  --code-bg: #f3f4f6;
 }
 
 @theme inline {
@@ -21,60 +19,84 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.75;
 }
 
-/* Terminal aesthetic scrollbar */
+/* Research paper aesthetic scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0e1a;
+  background: #f9f9f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #d1d5db;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #9ca3af;
 }
 
 /* Selection styling */
 ::selection {
-  background: var(--terminal-cyan);
-  color: #0a0e1a;
+  background: #bfdbfe;
+  color: #1e3a8a;
 }
 
 /* Code block styling */
 pre, code {
   font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+  background: var(--code-bg);
 }
 
-/* Terminal cursor animation */
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+/* Paper-like elements */
+.paper-section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.terminal-cursor {
-  animation: blink 1s infinite;
+/* Academic headings */
+h1, h2, h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color: #111827;
 }
 
-/* Glow effect for nerdy elements */
-.glow-effect {
-  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+/* Citation style links */
+a {
+  color: #2563eb;
+  text-decoration: none;
 }
 
-/* Grid background effect */
-.grid-bg {
-  background-image:
-    linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
-  background-size: 40px 40px;
+a:hover {
+  text-decoration: underline;
+}
+
+/* Section numbers */
+.section-number {
+  font-weight: 600;
+  color: #374151;
+  margin-right: 0.5rem;
+}
+
+/* Abstract box */
+.abstract-box {
+  background: #f9fafb;
+  border-left: 4px solid #2563eb;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+/* Bibliography/Reference style */
+.reference-item {
+  padding-left: 2rem;
+  text-indent: -2rem;
+  margin-bottom: 1rem;
 }
