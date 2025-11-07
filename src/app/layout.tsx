@@ -1,22 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import dynamic from 'next/dynamic';
 
 // Dynamically import client components to avoid SSR issues
 const Navigation = dynamic(() => import('@/components/Navigation'), { ssr: true });
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: 'swap',
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: "Mesbah Tanvir | Portfolio",
@@ -48,13 +35,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`}>
-      <body className="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
-        <Navigation />
-        <main className="flex-grow pt-16">
-          {children}
-        </main>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased bg-[#0a0e1a] text-gray-100 min-h-screen flex flex-col relative overflow-x-hidden">
+        {/* Grid background effect */}
+        <div className="fixed inset-0 grid-bg opacity-40 pointer-events-none"></div>
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Navigation />
+          <main className="flex-grow pt-16">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
