@@ -18,13 +18,13 @@ export default function ProjectsPage() {
   const projects: Project[] = [
     {
       id: 'project-1',
-      title: 'YourThoughts - CBT Depression Helper',
-      description: 'A Cognitive Behavioral Therapy (CBT) tool designed to help individuals manage and overcome depression. Features include thought journaling, cognitive distortion identification, mood tracking, and personalized CBT exercises to reframe negative thinking patterns.',
-      tags: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'MongoDB'],
+      title: 'YourThoughts - Mental Health Platform',
+      description: 'A comprehensive mental health self-help platform based on Cognitive Behavioral Therapy (CBT). Features include mental health assessments, thought journaling, mood tracking, and personalized CBT exercises. Demonstrates end-to-end ownership from concept to production deployment.',
+      tags: ['Golang', 'MongoDB', 'Terraform', 'Redis', 'React'],
       github: 'https://github.com/mesbahtanvir/yourthoughts',
       featured: true,
       type: 'personal',
-      link: 'https://thoughts-sigma-self.vercel.app/'
+      link: 'https://yourthoughts.ca'
     },
   ];
 

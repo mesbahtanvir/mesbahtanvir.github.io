@@ -7,24 +7,24 @@ import { User, Briefcase, Award, Heart } from 'lucide-react';
 export default function AboutPage() {
   const skills = [
     {
-      category: 'Distributed Systems',
-      items: ['System Design', 'Microservices', 'Concurrent Programming', 'Scalable Architectures']
+      category: 'Languages',
+      items: ['Golang', 'C++', 'Hack/PHP', 'SQL']
     },
     {
-      category: 'Backend',
-      items: ['Go (Golang)', 'C++', 'Python', 'Node.js', 'RESTful/gRPC APIs']
+      category: 'Distributed Systems & Databases',
+      items: ['MySQL', 'Redis', 'ClickHouse', 'Elasticsearch', 'MongoDB']
     },
     {
-      category: 'Frontend',
-      items: ['React', 'TypeScript']
+      category: 'Cloud & Infrastructure',
+      items: ['Kubernetes', 'AWS', 'GCP', 'Terraform']
     },
     {
-      category: 'Cloud & DevOps',
-      items: ['AWS', 'Docker', 'Terraform', 'Kubernetes']
+      category: 'Frameworks & Tools',
+      items: ['React', 'gRPC', 'Memcached', 'LLM']
     },
     {
-      category: 'Databases',
-      items: ['PostgreSQL', 'MongoDB', 'Redis', 'DynamoDB']
+      category: 'Core Expertise',
+      items: ['System Design', 'Microservices', 'Algorithms', 'Data Structures']
     },
   ];
 
@@ -56,16 +56,19 @@ export default function AboutPage() {
                   <span className="text-[#00d9ff]">USER:</span> Mesbah Tanvir
                 </div>
                 <div className="text-gray-300">
-                  <span className="text-[#00d9ff]">ROLE:</span> Software Engineer @ Big Tech
+                  <span className="text-[#00d9ff]">ROLE:</span> Backend Software Engineer @ Meta
                 </div>
                 <div className="text-gray-300">
-                  <span className="text-[#00d9ff]">EXPERIENCE:</span> 6+ years
+                  <span className="text-[#00d9ff]">EXPERIENCE:</span> 5+ years (Meta, ByteDance, Grab)
                 </div>
                 <div className="text-gray-300">
-                  <span className="text-[#00d9ff]">LOCATION:</span> Remote
+                  <span className="text-[#00d9ff]">LOCATION:</span> Canada (Remote)
                 </div>
                 <div className="text-gray-300">
-                  <span className="text-[#00d9ff]">ACHIEVEMENT:</span> Ranked 2nd Nationally in Competitive Programming
+                  <span className="text-[#00d9ff]">EDUCATION:</span> BSc in Computer Science, University of Dhaka
+                </div>
+                <div className="text-gray-300">
+                  <span className="text-[#00d9ff]">ACHIEVEMENT:</span> 2nd Place National Programming Contest 2018
                 </div>
               </div>
             </div>
@@ -85,24 +88,22 @@ export default function AboutPage() {
           </h2>
           <div className="bg-[#0f172a] border border-[#1e293b] rounded-lg p-6 space-y-4 text-gray-300">
             <p>
-              I&apos;m a passionate technologist with a strong foundation in problem-solving and system design.
-              My journey in technology began with competitive programming, where I ranked <span className="text-[#ffb86c] font-semibold">2nd nationally</span>,
-              a testament to my analytical abilities and dedication to solving complex computational challenges.
+              I&apos;m a Backend Software Engineer currently at <span className="text-[#ffb86c] font-semibold">Meta</span>, where I architect
+              end-to-end infrastructure for propagating organic signals to Ads Delivery systems. I&apos;ve reduced signal processing
+              latency from 200ms to 8ms while leading cross-team integrations across ads, organic systems, and ML pipelines.
             </p>
             <p>
-              For the past <span className="text-[#ffb86c] font-semibold">6 years</span>, I&apos;ve been working in <span className="text-[#ffb86c] font-semibold">Big Tech</span>, where I&apos;ve had the privilege
-              to design and implement large-scale systems that serve millions of users. My experience spans across
-              building robust backend infrastructure and optimizing database performance at scale.
+              Previously at <span className="text-[#ffb86c] font-semibold">ByteDance</span>, I built OLAP data infrastructure with elastic compute
+              and pluggable storage, enabling large-scale analytics across multiple product teams. I designed a fault-tolerant metadata
+              service achieving 99.99% availability and mentored engineers while conducting 50+ technical interviews.
             </p>
             <p>
-              My approach to technology is rooted in <span className="text-[#ffb86c] font-semibold">elegant problem-solving</span> and
-              <span className="text-[#ffb86c] font-semibold"> engineering excellence</span>. I thrive in environments that challenge me to push boundaries
-              and deliver solutions that are not just functional, but also efficient and maintainable.
+              At <span className="text-[#ffb86c] font-semibold">Grab</span>, I engineered vendor portal backends serving millions of transaction
+              queries and extended campaign infrastructure to improve merchant monetization.
             </p>
             <p>
-              When I&apos;m not architecting systems, I enjoy mentoring aspiring engineers and contributing to
-              open-source projects. I believe in continuous learning and staying at the forefront of technological
-              advancements to drive meaningful impact.
+              My journey in technology began with competitive programming, where I ranked <span className="text-[#ffb86c] font-semibold">2nd nationally</span> in 2018.
+              I also served as a problem setter and judge for national programming contests, giving back to the community that shaped my career.
             </p>
           </div>
         </motion.div>

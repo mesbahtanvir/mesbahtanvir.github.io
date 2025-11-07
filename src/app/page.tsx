@@ -7,7 +7,7 @@ import { Terminal, Code2, Database, Server, Github, Linkedin, Mail } from 'lucid
 
 export default function Home() {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = 'Software Engineer @ Big Tech';
+  const fullText = 'Backend Software Engineer @ Meta';
 
   useEffect(() => {
     let index = 0;
@@ -107,9 +107,9 @@ export default function Home() {
                   transition={{ delay: 2.1 }}
                   className="pl-4 text-gray-300 space-y-2"
                 >
-                  <p>Building scalable distributed systems and infrastructure at scale.</p>
-                  <p>Ranked 2nd nationally in competitive programming.</p>
-                  <p>6+ years of experience in Big Tech.</p>
+                  <p>Building scalable infrastructure at Meta, ByteDance, and Grab.</p>
+                  <p>Ranked 2nd nationally in competitive programming (2018).</p>
+                  <p>5+ years of experience in distributed systems and backend engineering.</p>
                 </motion.div>
 
                 <motion.div
@@ -130,15 +130,15 @@ export default function Home() {
                 >
                   <div className="flex items-center gap-3 text-gray-300">
                     <Server className="w-5 h-5 text-[#bd93f9]" />
-                    <span>Distributed Systems</span>
+                    <span>Backend Infrastructure</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <Database className="w-5 h-5 text-[#bd93f9]" />
-                    <span>Database Engineering</span>
+                    <span>Distributed Systems</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <Code2 className="w-5 h-5 text-[#bd93f9]" />
-                    <span>Backend Architecture</span>
+                    <span>Microservices</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <Terminal className="w-5 h-5 text-[#bd93f9]" />
