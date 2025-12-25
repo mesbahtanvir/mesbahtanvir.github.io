@@ -1,107 +1,99 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
-// This is a client component
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
-  const pathname = usePathname();
-  const isActive = pathname === href;
+const links = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
+] as const;
 
-  return (
-    <Link href={href} className="relative px-4 py-2 text-sm font-mono transition-colors group">
-      <span className="relative z-10 flex items-center gap-1">
-        {isActive && <span className="text-[#00ff41]">{'>'}</span>}
-        <span className={isActive ? 'text-white' : 'text-gray-400 group-hover:text-[#00d9ff]'}>
-          {children}
-        </span>
-      </span>
-      {isActive && (
-        <motion.span
-          layoutId="activeLink"
-          className="absolute inset-0 z-0 bg-[#1e293b] border border-[#334155] rounded"
-          initial={false}
-          transition={{
-            type: 'spring',
-            stiffness: 350,
-            damping: 30,
-          }}
-        />
-      )}
-    </Link>
-  );
-};
-
-// NavigationLinks component that uses usePathname
-const NavigationLinks = () => {
-  const links = [
-    { href: '/', label: 'home' },
-    { href: '/about', label: 'about' },
-    { href: '/projects', label: 'projects' },
-    { href: '/blog', label: 'blog' },
-    { href: '/contact', label: 'contact' },
-  ] as const;
-
-  return (
-    <>
-      {links.map((link) => (
-        <NavLink key={link.href} href={link.href}>
-          {link.label}
-        </NavLink>
-      ))}
-    </>
-  );
-};
-
-// Main Navigation component
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
 
-  const links = [
-    { href: '/', label: 'home' },
-    { href: '/about', label: 'about' },
-    { href: '/projects', label: 'projects' },
-    { href: '/blog', label: 'blog' },
-    { href: '/contact', label: 'contact' },
-  ] as const;
-
-  // Close mobile menu when route changes
   useEffect(() => {
+    const handleScroll = () => {
+      const sections = links.map(link => link.href.slice(1));
+      const scrollPosition = window.scrollY + 100;
+
+      // Check if page is scrolled for background effect
+      setScrolled(window.scrollY > 20);
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsMobileMenuOpen(false);
-  }, [pathname]);
+  };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/95 backdrop-blur-md border-b border-[#1e293b]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled
+        ? 'bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm'
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex items-center gap-2">
-            <Terminal className="w-5 h-5 text-[#00ff41]" />
-            <Link href="/" className="text-lg font-mono font-bold text-white hover:text-[#00d9ff] transition-colors">
-              <span className="text-[#00ff41]">~</span>/mesbah-tanvir
-            </Link>
+          <div className="flex items-center">
+            <button
+              onClick={() => scrollToSection('#home')}
+              className="text-lg font-semibold text-gray-900 hover:text-gray-600 transition-colors"
+            >
+              MT
+            </button>
           </div>
 
           <div className="hidden md:flex items-center space-x-1">
-            <Suspense fallback={
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <div key={i} className="h-6 w-16 mx-1 bg-[#1e293b] rounded animate-pulse" />
-                ))}
-              </div>
-            }>
-              <NavigationLinks />
-            </Suspense>
+            {links.map((link) => (
+              <button
+                key={link.href}
+                onClick={() => scrollToSection(link.href)}
+                className={`px-3 py-2 text-sm transition-colors rounded-md ${
+                  activeSection === link.href.slice(1)
+                    ? 'text-gray-900 bg-gray-100'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                }`}
+              >
+                {link.label}
+              </button>
+            ))}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 flex items-center gap-1.5 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-md hover:bg-gray-800 transition-colors"
+            >
+              <FileText className="w-4 h-4" />
+              Resume
+            </a>
           </div>
 
           <div className="flex items-center md:hidden">
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-[#1e293b] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#00ff41]"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -152,23 +144,31 @@ const Navigation = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden bg-[#0f172a] border-t border-[#1e293b]"
+            className="md:hidden overflow-hidden bg-white border-t border-gray-200"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="px-4 pt-2 pb-3 space-y-1">
               {links.map((link) => (
-                <Link
+                <button
                   key={link.href}
-                  href={link.href}
-                  className={`block px-3 py-2 rounded-md text-base font-mono ${
-                    pathname === link.href
-                      ? 'bg-[#1e293b] text-white border border-[#334155]'
-                      : 'text-gray-400 hover:bg-[#1e293b] hover:text-white'
+                  onClick={() => scrollToSection(link.href)}
+                  className={`block w-full text-left px-3 py-2 rounded-md text-base ${
+                    activeSection === link.href.slice(1)
+                      ? 'bg-gray-100 text-gray-900'
+                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                   }`}
                 >
-                  {pathname === link.href && <span className="text-[#00ff41] mr-2">{'>'}</span>}
                   {link.label}
-                </Link>
+                </button>
               ))}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-2 mt-2 bg-gray-900 text-white font-medium rounded-md"
+              >
+                <FileText className="w-4 h-4" />
+                Download Resume
+              </a>
             </div>
           </motion.div>
         )}
